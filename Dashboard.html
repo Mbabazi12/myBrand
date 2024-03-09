@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Page</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet"  
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+    <p class="Title">Admin Dashboard</p>
+    <div class="sidebar">
+       <a href="dashboard.html" ><div class="logo">
+        <img src="./images/logo.png" alt="">
+     </div></a>
+    <a href="index.html"  class="button3" ><i class="fa fa-home" aria-hidden="true"></i> <span>Home </span></a><br/>
+    <a href="blogsDash.html" class="button1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Manage blogs</span> </a><br/>
+    <a href="messagesDash.html" class="button2"> <i class="fa fa-envelope" aria-hidden="true"></i> <span>Messages </span></a><br/>
+    <a href="login.html" class="button4"><i class="fa fa-sign-out" aria-hidden="true"></i> <span>Log out </span></a>
+</div>
+<div class="notifications">
+<div class="messages">
+<div class="message"><p>Messages</p>
+   <p> <i class="fa fa-bell" aria-hidden="true"></i></p>
+    </div>
+<p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i> : <span id="msegs"></span></p>
+</div>
+<div class="blog_part">
+<div class="blog">
+<p>Blogs</p>
+ <p><i class="fa fa-bell" aria-hidden="true"></i></p></div>
+ <div class="blog-icons">
+<p class="icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i> :<span class="likes" id="likes"> </span></p>
+<p class="icon"><i class="fa fa-comment" aria-hidden="true"></i> : <span class="comments" id="comments"> </span></p>
+<p class="icon"><i class="fa fa-share" aria-hidden="true"></i> : <span class="shares" id="shares"> </span></p>
+</div>
+</div>
+</div>
+</div>
+    <script src="blogs.js"></script>
+    <script src="notifiy.js"></script>
+</body>
+</html>

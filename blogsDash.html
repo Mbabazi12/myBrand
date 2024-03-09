@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs Dashboard</title>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <p class="Title">Blogs management</p>
+  <div class="sidebar">
+    <a href="dashboard.html">
+      <div class="logo">
+        <img src="./images/logo.png" alt="">
+      </div>
+    </a>
+    <a href="index.html" class="button3"><i class="fa fa-home" aria-hidden="true"></i> Home </a><br />
+    <a href="blogsDash.html" class="button1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs
+    </a><br />
+    <a href="messagesDash.html" class="button2"> <i class="fa fa-envelope" aria-hidden="true"></i> Messages </a><br />
+    <a href="login.html" class="button4"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out </a>
+  </div>
+  <div class="notifications">
+    <div class="addBlog_section">
+      <form class="blog_form" name="blogForm">
+        <label>Title</label>
+        <input type="text" placeholder="Enter Blog Title" name="title" id="title" class="blogTitle" /><br />
+        <label>Description</label>
+        <input type="text-area" placeholder="Enter Blog Description" name="description" id="description"
+          class="blogDescription" /><br />
+        <label>Image</label>
+        <input type="text" placeholder="Enter Image URL" name="photo" id="image" class="photo" /><br />
+        <button> <a onclick="Add()" id="Submit" href="#submit">Add new Blog</a></button>
+        <!-- <button onclick="update()" id="update">Update Blog</button> -->
+      </form>
+      <script>
+        async function Add() {
+          let data = {
+            "blogTitle": blogForm.title.value,
+            "blogDescription": blogForm.description.value,
+            "blogImage": blogForm.photo.value
+          }
+
+          console.log(JSON.stringify(data));
+
+          let req = await fetch("http://localhost:8080/API/v1/blog/create",{
+            method: 'POST',
+            headers:{
+              "Content-Type": "application/json",
+              "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWViODVmNzM0MTdjZjhlZWQzNDA0OTciLCJlbWFpbCI6Im1iYWJhemkwNjlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA5OTkyMzIxfQ.AQTzZZkPQucK-u7QsLAMec9C5MvZ4cMhije_lnvNdRM`
+            },
+            body: JSON.stringify(data)
+          });
+          let res = await req.json();
+          window.alert(JSON.stringify(res));
+          getAllBlogs();
+        }
+      </script>
+      <div class="blogs_written">
+        <table id="blogstable">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Created Date</th>
+              <th colspan="2"> Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table_body">
+            <tr>
+              <td>Loading...</td>
+              <td></td><td></td><td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./my javascript/blogs.js"></script>
+  </script>
+</body>
+
+</html>

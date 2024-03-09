@@ -1,0 +1,231 @@
+body{
+    background-color: #111827;
+    font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+ margin: 0;
+    padding: 0;
+}
+button{
+    border-radius: 10px;
+    border: none;
+    color: #000000;
+    background-color: #d8b343;
+}
+td, button{
+    padding:10px;
+}
+.phot{
+    display:none;
+}
+table{
+    margin-top:40px;
+    width:100%;
+    background: #d8b343;
+}
+button a{
+    text-decoration:none;
+    color:#000;
+    font-weight: bolder;
+}
+#update{
+    display:none;
+}
+th{
+    color:#000;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align:left;
+}
+table, td, tbody {
+   border: 1px solid #100B21;
+   border-collapse: collapse;
+   color:#fff;
+   text-align:left;
+   padding:10px;
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+label{
+    color:white;
+}
+
+/*------Dashboard---*/
+.sidebar{
+top:0;
+    background: #d8b343;
+    position:fixed;
+    width:250px;
+    height:100vh;
+    margin-left:20px;
+ 
+}
+.sidebar a{
+    margin-top:30px;
+    font-size:24px;
+    margin-left:20px;
+     text-decoration:none;
+}
+.sidebar i{
+    margin-top:20px;
+    margin-right:10px;
+    margin-bottom:20px;
+}
+.notifications{
+   margin-left:250px;
+    padding:20px;
+     box-sizing: border-box;
+}
+
+.blog_form button{
+    margin-top:20px;
+padding:10px 40px;
+margin-left:340px;
+}
+.addBlog_section{
+    margin-left:30px;
+}
+.Title{
+    top:0;
+    text-align: center;
+  color:#000;
+  background-color: #d8b343;
+  padding:20px;
+  font-size:20px;
+  margin-left:50px;
+margin-right:20px;
+    
+}
+.blogTitle{
+    border:1px solid #fff;
+    width:368px;
+    height:43px;
+   margin-left:80px;
+    border-radius:10px;
+    padding:10px;
+}
+.photo{
+    border:1px solid #fff;
+    width:368px;
+    height:43px;
+   margin-left:70px;
+    border-radius:10px;
+    padding:10px;
+}
+
+.blog_form{
+    margin-left:30px;
+}
+.blogDescription{
+    border:1px solid #fff;
+    width:368px;
+    height:60px;
+    border-radius:10px;
+    margin-left:28px;
+    margin-bottom:30px;
+    margin-top:20px;
+    padding:10px;
+}
+.button1:hover{
+color:#000;
+}
+.button2:hover{
+color:#000;
+}
+.sidebar a{
+    color:#000;
+}
+h1{
+text-align:center;
+    color:#fff;
+}
+.logo{
+    margin-top:10px;
+  width:50px;
+   height:50px; 
+   margin-bottom:20px;
+  border-radius: 50%;
+  margin-left:10px;
+}
+.button3:hover{
+color:#000;
+}
+.button4:hover{
+color:#000;
+}
+.button1, .button2, .button3, .button4{
+padding-top:20px;
+transition:30ms ease-in-out;
+color:#fff;
+} 
+.messages{
+    background:#d8b343;
+    margin-left:30px;
+    padding:4px;
+    margin-right:50px;
+    border-radius:5px;
+}
+.message{
+     margin-left:20px;
+    display:flex;
+    justify-content:space-between;
+}
+.message p{
+color:#000;
+font-size:20px;
+}
+.message p .fa{
+    margin-right:20px;
+    color:#000;
+    font-size:20px;
+}
+.icon{
+    margin-top:0;
+    margin-left:20px;
+     color:#000;
+     font-size:20px;
+}
+p .icon{
+  margin-right:10px;   
+}
+.numbers{
+    color:#fff;
+    font-size:20px;
+}
+.blog{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
+}
+.blog p{
+    margin-left:20px;
+    margin-right:20px;
+    color:#000;
+    font-size:20px;
+}
+.blog-icons{
+    display:flex;
+}
+.blog-icons p{
+    margin-right:150px;
+    font-size:20px;
+}
+.btitles{
+    display:flex;
+    justify-content: space-between;
+}
+.blog_part{
+    background:#d8b343;
+    margin-left:30px;
+    /*width:100%;*/
+    margin-right:50px;
+border-radius:5px;
+}
+.blogs_written{
+    margin-left:30px;
+}
+
+ h2{
+    /*text-align:center;*/
+    padding: 5px;
+    font-size: larger;
+    color:white;
+}
