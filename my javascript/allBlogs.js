@@ -1,6 +1,6 @@
-const blog_container = document.getElementById('all_blogs_container');
+const container = document.getElementById('all_blogs_container');
 
-function getAllBlogs() {
+function getOneBlog() {
   const api = `https://my-server-vfg8.onrender.com/API/v1/blog/get`;
   const postman = {
       method: 'GET'
@@ -15,17 +15,17 @@ function getAllBlogs() {
 }).then((data) => {
   const allBlogs = data.data
   if(allBlogs.length > 0 ){
-    blog_container.innerHTML = "";
+    container.innerHTML = "";
     for(let i =0; i < allBlogs.length; i++){
       const blogDiv = document.createElement("div");
       blogDiv.innerHTML = `
       <div class="Blog1Container">
       <h2>${allBlogs[i].blogTitle}</h2>
       <img src=${allBlogs[i].blogImage} alt="" class="image">
-      <a href="readMore.html" class="read-more">Read More</a>
+      <a href="readMore.html?id=${allBlogs[i]._id}" class="read-more">Read More</a>
   </div>
       `
-      blog_container.append(blogDiv)
+      container.append(blogDiv)
     }
 
   }
@@ -33,7 +33,7 @@ function getAllBlogs() {
 })
 }
 
-getAllBlogs();
+getOneBlog();
 
 async function blogDelete(id){
   table.innerHTML = loading;
@@ -45,7 +45,7 @@ async function blogDelete(id){
   });
   let res = await req.json();
   console.log(res);
-  getAllBlogs();
+  getOneBlog();
 }
 // function validateForm() {
 //   const title = document.getElementById("title").value;
@@ -66,3 +66,23 @@ async function blogDelete(id){
 //   }
 //   return true;
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

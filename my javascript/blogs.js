@@ -6,6 +6,14 @@ let loading = `            <tr>
 <td></td><td></td><td></td>
 </tr>`;
 
+function reduceText(text, maxLength) {
+  if (text.length <= maxLength) {
+      return text;
+  }
+  var trimmedText = text.substr(0, maxLength);
+  return trimmedText + "..";
+}
+
 function getAllBlogs() {
   const api = `https://my-server-vfg8.onrender.com/API/v1/blog/get`;
   const postman = {
@@ -20,17 +28,14 @@ function getAllBlogs() {
     return response.json();
 }).then((data) => {
   const allBlogs = data.data
-  // let newRow = table_body.insertRow(table_body.rows.length)
-  // let title = newRow.insertCell(0)
-  // let description = newRow.insertCell(1)
-  // let image = newRow.insertCell(2)
   if(allBlogs.length > 0 ){
     table.innerHTML = "";
     for(let i =0; i < allBlogs.length; i++){
-      console.log("index", i)
       const row = document.createElement("tr");
+      let description = reduceText(allBlogs[i].blogDescription, 12);
+      
       row.innerHTML = `<td>${allBlogs[i].blogTitle}</td>
-                       <td>${allBlogs[i].blogDescription}</td>
+                       <td>${description}</td>
                        <td>${allBlogs[i].CreatedDate}</td>
                        <td><a href="blogUpdate.html?id=${allBlogs[i]._id}">Update</a></td>
                        <td><a href="#deleteBlog" onclick="blogDelete('${allBlogs[i]._id}')">Delete</a></td>`
