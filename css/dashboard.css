@@ -48,7 +48,6 @@ label{
     color:white;
 }
 
-/*------Dashboard---*/
 .sidebar{
 top:0;
     background: #d8b343;
@@ -215,7 +214,6 @@ p .icon{
 .blog_part{
     background:#d8b343;
     margin-left:30px;
-    /*width:100%;*/
     margin-right:50px;
 border-radius:5px;
 }
@@ -224,7 +222,6 @@ border-radius:5px;
 }
 
  h2{
-    /*text-align:center;*/
     padding: 5px;
     font-size: larger;
     color:white;

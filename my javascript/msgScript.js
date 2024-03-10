@@ -6,7 +6,8 @@ let loading = `            <tr>
 </tr>`;
 
 function getAllmessages() {
-  const api = `http://localhost:8080/API/v1/message/getMessages`;
+  const api = `https://my-server-vfg8.onrender.com/API/v1/message/getMessages`;
+  console.log('loading')
   const postman = {
       method: 'GET'
   };
@@ -26,12 +27,26 @@ function getAllmessages() {
       const row = document.createElement("tr");
       row.innerHTML = `<td>${allMessages[i].email}</td>
                        <td>${allMessages[i].message}</td>
-                       <td>bubtton</a></td>
-                       <td>bubtton</a></td>`
+                       <td><a href="href=mailto:${allMessages[i].email}">Reply</a></td>
+                       <td><a href="#deleteBlog" onclick="messageDelete('${allMessages[i]._id}')">Delete</a></td>`
       table.appendChild(row)
     }
 
   }
   console.log(allMessages)
 })
+}
+getAllmessages();
+
+async function messageDelete(id){
+  table.innerHTML = loading;
+  let req = await fetch("https://my-server-vfg8.onrender.com/API/v1/message/"+id,{
+    method: 'delete',
+    headers:{
+      "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWViODVmNzM0MTdjZjhlZWQzNDA0OTciLCJlbWFpbCI6Im1iYWJhemkwNjlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA5OTkyMzIxfQ.AQTzZZkPQucK-u7QsLAMec9C5MvZ4cMhije_lnvNdRM`
+    }
+  });
+  let res = await req.json();
+  console.log(res);
+  getAllmessages();
 }

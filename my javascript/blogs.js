@@ -1,4 +1,4 @@
-const table = document.getElementById('table_body')
+const table = document.getElementById('table_body');
 // const table_body = document.getElementById('table_body')[0];
 
 let loading = `            <tr>

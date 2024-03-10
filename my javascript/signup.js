@@ -32,15 +32,6 @@ function addData() {
         }
         return response.json();
     })
-        // .then(data => {
-        //     console.log(data);
-        //     if(data){
-        //         alert('signed up successfully')
-        //         window.location.href = `login.html`
-        //       }else{
-        //         alert('signup failed')
-        //       }
-        // })
         .catch(error => {
             console.error('Error:', error);
         });

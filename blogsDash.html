@@ -46,7 +46,7 @@
 
           console.log(JSON.stringify(data));
 
-          let req = await fetch("http://localhost:8080/API/v1/blog/create",{
+          let req = await fetch("https://my-server-vfg8.onrender.com/API/v1/blog/create",{
             method: 'POST',
             headers:{
               "Content-Type": "application/json",
@@ -55,7 +55,7 @@
             body: JSON.stringify(data)
           });
           let res = await req.json();
-          window.alert(JSON.stringify(res));
+          window.alert("blog created successful");
           getAllBlogs();
         }
       </script>

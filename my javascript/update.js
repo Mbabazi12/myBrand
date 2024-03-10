@@ -23,7 +23,7 @@ async function update() {
     id = blogForm.id.value
     console.log(JSON.stringify(data));
 
-    let req = await fetch("http://localhost:8080/API/v1/blog/"+id, {
+    let req = await fetch("https://my-server-vfg8.onrender.com/API/v1/blog/"+id, {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json",

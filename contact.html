@@ -10,7 +10,7 @@
 <body>
     <div class="mainContainer">
         <div class="header">
-            <a href="index.html"><label class="logo">Diane</label></a>
+            <a href="index.html"><p class="logo">Diane</p></a>
             <div class="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="aboutMe.html">About</a>
@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="cont">
                     <div class="text">
-                      <h2>Contact <label class="me">_Me</label></h2>
+                      <h2>Contact <p class="me">_Me</p></h2>
                     </div>
                     <p>This requires my address and you can also send a short message describing your needs so that i can help you</p>
                 </div>
@@ -33,17 +33,19 @@
                 <div class="class">
                 <div class="addresses">
                     <div class="address">
-                      <p><label class="add">Adress_</label>kg09 road, Kigali, Rwanda </p>
-                      <p><label class="add">PhoneNo_</label>+250790139377 </p>
-                      <p><label class="add">Email_</label>mbabazi069@gmail.com </p>
+                      <p><p class="add">Adress_</p>kg09 road, Kigali, Rwanda </p><br>
+                      <p><p class="add">PhoneNo_</p>+250790139377 </p><br>
+                      <p><p class="add">Email_</p>mbabazi069@gmail.com </p>
                     </div>
                 </div>
                 <div class="message">
-                    <input type="text" id="text" placeholder="Name">
-                    <input type="text" id="hold" placeholder="Message">
-                    <div class="btnn">
-                    <button class="btn"><a href="#">SEND</a></button>
-                </div>
+                    <form name="contact_form">
+                        <input type="email" id="text" name="Email" placeholder="Enter Email">
+                        <input type="text" id="hold" name="Message" placeholder="EnterMessage">
+                        <div class="btnn">
+                        <button class="btn" id="send"><a href="#">SEND</a></button>
+                    </div>
+                    </form>
                 </div>
             </div>
             </div>
@@ -66,5 +68,6 @@
     </div>
     </div>
 </div>
+<script src="./my javascript/contact.js"></script>
 </body>
 </html>

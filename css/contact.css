@@ -10,12 +10,12 @@
     width: 100%;
     height: 100vh;
 }
-label{
+.logo{
     display: flex;
     justify-content: flex-start;
     width: 10%;
 }
-label.logo{
+.logo{
     color: #ffffff;
     font-size: 20px;
     line-height: 34px;
@@ -93,8 +93,8 @@ label.logo{
     font-size: larger;
 }
 .address  p{
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
+    flex-direction: row;
 }
 .address .add{
     color: #d8b343;
@@ -116,11 +116,13 @@ input{
     overflow-wrap: break-word;
 }
 #text{
+    padding: 10px;
     font-size: large;
     height: 6vh;
     background-color: #727070;
 }
  #hold{
+    padding: 10px;
     margin-top: 10px;
     font-size: large;
     line-height: 106px;
