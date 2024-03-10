@@ -13,10 +13,6 @@ function getAllmessages() {
   };
   fetch(api, postman)
   .then(response => {
-    console.log (response.status)
-    // if(response.status == "401"){
-    //   alert (`messages not found`)
-    // }
     return response.json();
 }).then((data) => {
   const allMessages = data.data
@@ -27,13 +23,11 @@ function getAllmessages() {
       const row = document.createElement("tr");
       row.innerHTML = `<td>${allMessages[i].email}</td>
                        <td>${allMessages[i].message}</td>
-                       <td><a href="href=mailto:${allMessages[i].email}">Reply</a></td>
+                       <td><a href="mailto:${allMessages[i].email}">Reply</a></td>
                        <td><a href="#deleteBlog" onclick="messageDelete('${allMessages[i]._id}')">Delete</a></td>`
       table.appendChild(row)
     }
-
   }
-  console.log(allMessages)
 })
 }
 getAllmessages();
