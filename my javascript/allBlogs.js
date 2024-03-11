@@ -40,7 +40,7 @@ async function blogDelete(id){
   let req = await fetch("https://my-server-vfg8.onrender.com/API/v1/blog/"+id,{
     method: 'delete',
     headers:{
-      "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWViODVmNzM0MTdjZjhlZWQzNDA0OTciLCJlbWFpbCI6Im1iYWJhemkwNjlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA5OTkyMzIxfQ.AQTzZZkPQucK-u7QsLAMec9C5MvZ4cMhije_lnvNdRM`
+      "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiO…jYzfQ.YG8047MYYvWTR8t9q2nQPxAfQxE1QyQIjQ9yxor_hYk`
     }
   });
   let res = await req.json();
@@ -65,24 +65,4 @@ async function blogDelete(id){
 //     return false;
 //   }
 //   return true;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//}
